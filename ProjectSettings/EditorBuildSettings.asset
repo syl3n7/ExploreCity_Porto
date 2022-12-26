@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreateAcc.unity
     guid: 9f6b0ebe45008d6f8b12891a9ea08080
+  - enabled: 1
+    path: Assets/Scenes/CreateAvatar.unity
+    guid: 0fcd04f480c78be368d107f87e1dbf86
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 103834f05e1c905b79d128f455ef47a8
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6cbbbc0ec878ce96f8fce9f47348e53f, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: c6978aeecdb7f1c56a1c5da5aa4990aa, type: 2}
