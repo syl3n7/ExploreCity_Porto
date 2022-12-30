@@ -1065,9 +1065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b6ad18548da632599033bbbbdb7aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dealButton: {fileID: 0}
-  player: {fileID: 0}
-  dealer: {fileID: 0}
 --- !u!1 &983708271
 GameObject:
   m_ObjectHideFlags: 0

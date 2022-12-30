@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Deck : MonoBehaviour
 {
+    /*
     public Sprite[] cardSprites;
     protected int[] cardValues = new int[53];
     private int currentIndex = 0;
@@ -70,4 +71,5 @@ public class Deck : MonoBehaviour
         //index 0 always contains the back of the card
         return cardSprites[0];
     }
+    */
 }

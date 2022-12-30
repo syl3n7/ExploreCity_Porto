@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    /*
     // Get other scripts
     public Card card;   
     public Deck deck;
@@ -52,4 +53,5 @@ public class Player : MonoBehaviour
         cardIndex++;
         return handValue;
     }
+    */
 }

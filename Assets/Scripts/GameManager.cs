@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    /*
     public Button dealButton;
     public Player player, dealer;
     
@@ -43,4 +43,5 @@ public class GameManager : MonoBehaviour
             Screen.SetResolution(Screen.width, (int)(((float)Screen.width) * (h / w)), false);
         }
     }
+    */
 }
