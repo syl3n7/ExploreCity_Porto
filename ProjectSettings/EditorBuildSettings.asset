@@ -9,49 +9,49 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/LoginScreen.unity
+    path: Assets/Scenes/AfterSplash/LoginScreen.unity
     guid: c72a0fe25f532c724ba3683b6bffa575
   - enabled: 1
-    path: Assets/Scenes/CreateAcc.unity
+    path: Assets/Scenes/AfterSplash/CreateAcc.unity
     guid: 9f6b0ebe45008d6f8b12891a9ea08080
   - enabled: 1
-    path: Assets/Scenes/CreateAvatar.unity
+    path: Assets/Scenes/AfterSplash/CreateAvatar.unity
     guid: 0fcd04f480c78be368d107f87e1dbf86
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/MainMenu/MainMenu.unity
     guid: 103834f05e1c905b79d128f455ef47a8
   - enabled: 1
-    path: Assets/Scenes/EditAvatar.unity
+    path: Assets/Scenes/MainMenu/EditAvatar.unity
     guid: fc1b1fe5fa7331617a674c77a60d4c34
   - enabled: 1
-    path: Assets/Scenes/EditProfile.unity
+    path: Assets/Scenes/MainMenu/EditProfile.unity
     guid: bfe4d1798a3f9b448b7a1700db3c108f
   - enabled: 1
-    path: Assets/Scenes/EmoteMenu.unity
+    path: Assets/Scenes/MainMenu/EmoteMenu.unity
     guid: f8d3eb01b506d31059b3a18f8e98509d
   - enabled: 1
-    path: Assets/Scenes/Friends.unity
+    path: Assets/Scenes/MainMenu/Friends.unity
     guid: c1d4a1095d6a6005eaab6c9f5bd2b849
   - enabled: 1
-    path: Assets/Scenes/Messages.unity
+    path: Assets/Scenes/MainMenu/Messages.unity
     guid: f8ed02a8acf4c3040be4486e3fbf3eb6
   - enabled: 1
-    path: Assets/Scenes/Store.unity
+    path: Assets/Scenes/MainMenu/Store.unity
     guid: 41c2688d0d772bfe68fcfbc5820ddfce
   - enabled: 1
-    path: Assets/Scenes/RoomType.unity
+    path: Assets/Scenes/InGame/RoomType.unity
     guid: 2bf645696463e559d88380172eb2ceb6
   - enabled: 1
-    path: Assets/Scenes/Rooms.unity
+    path: Assets/Scenes/InGame/Rooms.unity
     guid: e98d98ae74d93d0afa8852867e1df20b
   - enabled: 1
-    path: Assets/Scenes/RoomCreate.unity
+    path: Assets/Scenes/InGame/RoomCreate.unity
     guid: fa8167c3ac248281fbac61392d7f9607
   - enabled: 1
-    path: Assets/Scenes/WaitingRoom.unity
+    path: Assets/Scenes/InGame/WaitingRoom.unity
     guid: f1c3c38f4330a585eb40aabea61a6fc4
   - enabled: 1
-    path: Assets/Scenes/In-Game.unity
+    path: Assets/Scenes/InGame/In-Game.unity
     guid: e98accdac9c22fddd9f63eed52a13a6e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6cbbbc0ec878ce96f8fce9f47348e53f, type: 2}
