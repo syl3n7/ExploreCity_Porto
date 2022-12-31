@@ -1,2 +1,2 @@
 # MicroMacro-2D
- Project for Interface Design Class.
+ Final Project for Interface Design Class.
