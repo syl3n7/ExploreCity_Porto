@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Random = Unity.Mathematics.Random;
+using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour
 {
-    
+
     public TMP_Text pname;
     public TMP_Text region;
     public TMP_Text money;
@@ -18,11 +18,11 @@ public class Buttons : MonoBehaviour
     public TMP_Text gamesplayed;
 
     RangeInt r = new RangeInt();
-    
+
     void Start()
     {
         string currentScene = SceneManager.GetActiveScene().ToString();
-        if(currentScene == "MainMenu")
+        if (currentScene == "MainMenu")
         {
             ReadUserInfo();
         }
@@ -35,40 +35,37 @@ public class Buttons : MonoBehaviour
             }
         }
     }
+
     public void LoadScene(string sCene)
     {
-        if (sCene == "CreateAvatar")
-        {
-            GenerateSaveGuest();
-            SceneManager.LoadScene(sCene);
-        }
-        else
-        {
-            SceneManager.LoadScene(sCene);
-        }
+        SceneManager.LoadScene(sCene);
     }
 
     public void ReadUserInfo()
     {
         pname.text = PlayerPrefs.GetString("PlayerName");
-        region.name = PlayerPrefs.GetString("PlayerRegion");
+        //region.name = PlayerPrefs.GetString("PlayerRegion");
     }
-    
+
     public void SavePlayerNameRegion()
     {
         PlayerPrefs.SetString("PlayerName", pname.text);
         PlayerPrefs.SetString("PlayerRegion", region.text);
-        Debug.Log(PlayerPrefs.GetString("PlayerName")+"\n"+PlayerPrefs.GetString("PlayerRegion"));
+        Debug.Log(PlayerPrefs.GetString("PlayerName") + "\n" + PlayerPrefs.GetString("PlayerRegion"));
         PlayerPrefs.Save();
     }
 
     public void GenerateSaveGuest()
     {
-        PlayerPrefs.SetString("PlayerName", "Player0"+r.ToString());
+        PlayerPrefs.SetString("PlayerName", "Player0" + r.ToString());
         PlayerPrefs.SetString("PlayerRegion", "WorldWide");
-        Debug.Log(PlayerPrefs.GetString("PlayerName")+"\n"+PlayerPrefs.GetString("PlayerRegion"));
+        Debug.Log(PlayerPrefs.GetString("PlayerName") + "\n" + PlayerPrefs.GetString("PlayerRegion"));
         PlayerPrefs.Save();
     }
+
+    public void Expand(ContentSizeFitter content) { content.verticalFit = ContentSizeFitter.FitMode.PreferredSize; }
+
+    public void Collapse(ContentSizeFitter content) { content.verticalFit = ContentSizeFitter.FitMode.MinSize; }
     
     public void ExitGame()
     {
