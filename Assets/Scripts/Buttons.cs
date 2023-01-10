@@ -26,14 +26,6 @@ public class Buttons : MonoBehaviour
         {
             ReadUserInfo();
         }
-
-        if (currentScene == "LoginScreen")
-        {
-            if (PlayerPrefs.GetString("PlayerName") != "" && PlayerPrefs.GetString("PlayerRegion") != "")
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
-        }
     }
 
     public void LoadScene(string sCene)
@@ -57,8 +49,10 @@ public class Buttons : MonoBehaviour
 
     public void GenerateSaveGuest()
     {
-        PlayerPrefs.SetString("PlayerName", "Player0" + r.ToString());
-        PlayerPrefs.SetString("PlayerRegion", "WorldWide");
+        string p = "Player0" + r.ToString();
+        PlayerPrefs.SetString("PlayerName", p);
+        string region = "Worldwide";
+        PlayerPrefs.SetString("PlayerRegion", region);
         Debug.Log(PlayerPrefs.GetString("PlayerName") + "\n" + PlayerPrefs.GetString("PlayerRegion"));
         PlayerPrefs.Save();
     }
