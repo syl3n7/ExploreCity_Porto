@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/LoginScreen.unity
     guid: c72a0fe25f532c724ba3683b6bffa575
@@ -20,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 103834f05e1c905b79d128f455ef47a8
-  - enabled: 1
-    path: Assets/Scenes/EditAvatar.unity
-    guid: fc1b1fe5fa7331617a674c77a60d4c34
   - enabled: 1
     path: Assets/Scenes/EditProfile.unity
     guid: bfe4d1798a3f9b448b7a1700db3c108f

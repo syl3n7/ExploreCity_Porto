@@ -3683,7 +3683,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594911391}
-  - component: {fileID: 594911390}
   - component: {fileID: 594911392}
   m_Layer: 0
   m_Name: Bttns
@@ -3692,26 +3691,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &594911390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594911389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513b9334635e633f9b210001ef38fcdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pname: {fileID: 0}
-  region: {fileID: 0}
-  money: {fileID: 0}
-  tickets: {fileID: 0}
-  level: {fileID: 0}
-  rank: {fileID: 0}
-  xp: {fileID: 0}
-  gamesplayed: {fileID: 0}
 --- !u!4 &594911391
 Transform:
   m_ObjectHideFlags: 0
@@ -4872,7 +4851,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594911390}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Button_Load_Exit, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -5629,7 +5608,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 594911390}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Button_Load_Exit, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
