@@ -8,16 +8,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
+using Toggle = UnityEngine.UI.Toggle;
 
 public class GameManager : Buttons
 {
-    public GameObject panel;
+    public GameObject menuPanel;
     public BatteryStatus battery;
     public TMPro.TMP_InputField input;
     public TMPro.TMP_Text region_text;
     public Player p1;
     public TMPro.TMP_Text playername;
     public Image batteryimg;
+    public GameObject toggleMusic;
+    public GameObject toggleVibration;
+    
     void Start()
     {
         p1 = new Player(1000,5, "placeholdername", "Worlwide");
@@ -25,13 +29,13 @@ public class GameManager : Buttons
 
     void Update()
     {
-        if (panel.activeSelf)
+        if (menuPanel.activeSelf)
         {
             playername.text = PlayerPrefs.GetString("Name");
-            
+            //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
             if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
             else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
-            else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull");
+            else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro.
         }
     }
     
@@ -57,4 +61,39 @@ public class GameManager : Buttons
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("LoginScreen");
     }
+
+    public void ToogleMusic()
+    {
+        Toggle TMtoggle = toggleMusic.GetComponentInChildren<Toggle>();
+        Text TMtext = toggleMusic.GetComponentInChildren<Text>();
+        Image TMimg = toggleMusic.GetComponentInChildren<Image>();
+        if (!TMtoggle.isOn)
+        {
+            TMtext.text = "Desligado";
+            TMimg.color = Color.red;
+        }
+        else
+        {
+            TMtext.text = "Ligado";
+            TMimg.color = Color.blue;
+        }
+    }
+
+    public void ToggleVibration()
+    {
+        Toggle TVtoggle = toggleVibration.GetComponentInChildren<Toggle>();
+        Text TVtext = toggleVibration.GetComponentInChildren<Text>();
+        Image TVimg = toggleVibration.GetComponentInChildren<Image>();
+        if (!TVtoggle.isOn)
+        {
+            TVtext.text = "Desligado";
+            TVimg.color = Color.red;
+        }
+        else
+        {
+            TVtext.text = "Ligado";
+            TVimg.color = Color.blue;
+        }
+    }
+    
 }

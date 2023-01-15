@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadAsync : MonoBehaviour
 {
-    void LoadMenu()
+    public void StartRoutine(string scene)
     {
-        SceneManager.LoadSceneAsync("Menu");
-    }     
+        StartCoroutine(LoadScene(scene));
+    }
+    public IEnumerator LoadScene(string scene)
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadSceneAsync(scene);
+    }
 }

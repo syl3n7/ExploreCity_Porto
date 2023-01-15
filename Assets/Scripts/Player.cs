@@ -8,14 +8,17 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     int _money = 0;
-    int _tickets = 0;
+    int _tickets = 0; 
+    double _level = 0;
     string _name = null;
     string _region = null;
+    
 
     public Player(int m, int t, string n, string r)
     {
         _money = m;
-        _tickets = t; 
+        _tickets = t;
+        _level = 1;
         _name = n;
         _region = r;
     }
@@ -23,17 +26,17 @@ public class Player : MonoBehaviour
     public int AddMoney(int moneyToAdd)
     {
         _money += moneyToAdd;
-
+        _level += 0.3f;
         return _money;
     }
 
     public int AddTickets(int ticketsToAdd)
     {
         _tickets += ticketsToAdd;
-        
+        _level += 0.2f;
         return _tickets;
     }
-
+    
     public string ChangeRegion(string regionToChangeTo)
     {
         _region = regionToChangeTo;
