@@ -1,41 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
+using UnityEngine.UI;
 
-public class Player
+public class Player : MonoBehaviour
 {
-    int money = 0;
-    int tickets = 0;
-    string name = null;
-    string region = null;
-    protected Sprite hat;
-    protected Sprite head;
-    protected Sprite eyes;
-    protected Sprite mouth;
-    protected Sprite legs;
-    protected Sprite feet;
-    
-    Player(/*int money, int tickets, */ string name, string region)
+    int _money = 0;
+    int _tickets = 0;
+    string _name = null;
+    string _region = null;
+
+    public Player(int m, int t, string n, string r)
     {
-        money = 0;
-        tickets = 5; //default 5 tickets at begginig of game
-        this.name = name;
-        this.region = region;
-        hat = Resources.Load<Sprite>("Logos/github.png");
-        head = Resources.Load<Sprite>("Logos/github.png");
-        eyes = Resources.Load<Sprite>("Logos/github.png");
-        mouth = Resources.Load<Sprite>("Logos/github.png");
-        legs = Resources.Load<Sprite>("Logos/github.png");
-        feet = Resources.Load<Sprite>("Logos/github.png");
+        _money = m;
+        _tickets = t; 
+        _name = n;
+        _region = r;
     }
 
     public int AddMoney(int moneyToAdd)
     {
-        money += moneyToAdd;
+        _money += moneyToAdd;
 
-        return money;
+        return _money;
     }
 
-    //develop the rest of the player later today
+    public int AddTickets(int ticketsToAdd)
+    {
+        _tickets += ticketsToAdd;
+        
+        return _tickets;
+    }
+
+    public string ChangeRegion(string regionToChangeTo)
+    {
+        _region = regionToChangeTo;
+        PlayerPrefs.SetString("Region", regionToChangeTo);
+        PlayerPrefs.Save();
+        return _region;
+    }
+
+    public void NameChange(string nameToChangeTo)
+    {
+        _name = nameToChangeTo;
+        PlayerPrefs.SetString("Name", nameToChangeTo);
+        PlayerPrefs.Save();
+        //return _name;
+    }
+
+    public Image ChangeColor(Image spriteToChange, Color newColor) // lembrar que sao dois argumentos para passsar
+    {
+        spriteToChange.color = newColor;
+
+        return spriteToChange;
+    }
+
+    public void cleanPrefs()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 159156400}
   - component: {fileID: 159156401}
   m_Layer: 0
-  m_Name: Bttns
+  m_Name: Async
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,17 +164,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 159156398}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b6ad18548da632599033bbbbdb7aeb, type: 3}
+  m_Script: {fileID: 11500000, guid: dc68d6223fd14ae3e8f0e038220b32ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pname: {fileID: 0}
-  region: {fileID: 0}
-  money: {fileID: 0}
-  tickets: {fileID: 0}
-  level: {fileID: 0}
-  rank: {fileID: 0}
-  xp: {fileID: 0}
-  gamesplayed: {fileID: 0}
 --- !u!1 &311307771
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +327,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159156401}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
@@ -344,7 +336,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CreateAcc
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &696207139
@@ -604,7 +596,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159156401}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: GenerateSaveGuest
         m_Mode: 1
@@ -616,7 +608,7 @@ MonoBehaviour:
           m_StringArgument: CreateAvatar
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 159156401}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5

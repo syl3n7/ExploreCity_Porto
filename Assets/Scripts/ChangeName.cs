@@ -11,25 +11,25 @@ public class ChangeName : MonoBehaviour
     int i = 0;
     int z = 0;
 
-    void changeName()
+    public void changeName()
     {
-        if(i < Names.Length)
+        if (i < Names2.Length)
         {
             country.text = Names[i];
-        }     
+        }else if (i == Names.Length) i = 0;  
         else
         {
-            Debug.Log("Can't find the name in the index" + i + " " + Names[z]);
+            Debug.Log("Can't find the name in the index" + i + " " + Names[i]);
         }
         i++;
     }
 
-    void changeName2()
+    public void changeName2()
     {
         if (z < Names2.Length)
         {
             language.text = Names2[z];
-        }
+        }else if (z == Names2.Length) z = 0;  
         else
         {
             Debug.Log("Can't find the name in the index" + z + " " + Names2[z]);
