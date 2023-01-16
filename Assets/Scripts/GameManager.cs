@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 using UnityEditor;
-using UnityEditor.SearchService;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -29,14 +29,11 @@ public class GameManager : Buttons
 
     void Update()
     {
-        if (menuPanel.activeSelf)
-        {
-            playername.text = PlayerPrefs.GetString("Name");
-            //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
-            if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
-            else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
-            else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro.
-        }
+        playername.text = PlayerPrefs.GetString("Name");
+        //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
+        if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
+        else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
+        else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro
     }
     
     public void SavePrefs()
