@@ -11,7 +11,12 @@ public class LoadAsync : MonoBehaviour
     }
     public IEnumerator LoadScene(string scene)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         SceneManager.LoadSceneAsync(scene);
     }
+	public void Login(string scene)
+    {
+        if(PlayerPrefs.HasKey("Name")) StartRoutine("Menu");
+        else StartRoutine(scene); //going to make the login screen a panel in menu scene to be able to better control everything.
+    }		
 }
