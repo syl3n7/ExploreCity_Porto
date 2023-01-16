@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEditor;
-
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -21,7 +20,9 @@ public class GameManager : Buttons
     public Image batteryimg;
     public GameObject toggleMusic;
     public GameObject toggleVibration;
-    
+    public GameObject CreateAccPanel;
+    public GameObject LoginPanel;
+
     void Start()
     {
         p1 = new Player(1000,5, "placeholdername", "Worlwide");
@@ -34,6 +35,15 @@ public class GameManager : Buttons
         if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
         else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
         else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro
+    }
+    public void Login()
+    {
+        if (PlayerPrefs.HasKey("Name")) menuPanel.SetActive(true);
+        else
+        {
+            LoginPanel.SetActive(false);
+            CreateAccPanel.SetActive(true);
+        }
     }
     
     public void SavePrefs()
@@ -59,7 +69,7 @@ public class GameManager : Buttons
         SceneManager.LoadScene("LoginScreen");
     }
 
-    public void ToogleMusic()
+    public void ToogleMusic() //alterar o estado do toggle da musica
     {
         Toggle TMtoggle = toggleMusic.GetComponentInChildren<Toggle>();
         Text TMtext = toggleMusic.GetComponentInChildren<Text>();
@@ -68,6 +78,7 @@ public class GameManager : Buttons
         {
             TMtext.text = "Desligado";
             TMimg.color = Color.red;
+
         }
         else
         {
