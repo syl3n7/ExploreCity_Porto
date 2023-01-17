@@ -17,12 +17,17 @@ public class GameManager : Buttons
     public TMPro.TMP_Text region_text;
     public Player p1;
     public TMPro.TMP_Text playername;
-    public Image batteryimg;
+    //public Image batteryimg;
     public GameObject toggleMusic;
     public GameObject toggleVibration;
     public GameObject CreateAccPanel;
     public GameObject LoginPanel;
 
+    public int counterGamesPlayed;
+    public int playerLevel;
+    public int playerRank;
+    public double playerXP;
+    
     void Start()
     {
         p1 = new Player(1000,5, "placeholdername", "Worlwide");
@@ -31,10 +36,13 @@ public class GameManager : Buttons
     void Update()
     {
         playername.text = PlayerPrefs.GetString("Name");
-        //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
-        if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
-        else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
-        else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro
+        
+        
+        
+        // //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
+        // if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
+        // else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
+        // else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro
     }
     public void Login()
     {

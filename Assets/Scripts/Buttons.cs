@@ -16,11 +16,10 @@ public class Buttons : MonoBehaviour
 
     // RangeInt r = new RangeInt();
     
-
-    public void LoadScene(string sCene)
-    {
-        SceneManager.LoadScene(sCene);
-    }
+    // public void LoadScene(string sCene)
+    // {
+    //     SceneManager.LoadScene(sCene);
+    // }
 
     // public void GenerateSaveGuest()
     // {
