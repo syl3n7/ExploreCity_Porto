@@ -8,7 +8,7 @@ public class ChangeContentSizeFitter : MonoBehaviour
     public GameObject banner;
     void Update()
     {
-        banner.GetComponentInChildren<Image>();
+        //banner.gameObject.
 
     }
 }
