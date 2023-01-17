@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 103834f05e1c905b79d128f455ef47a8
-  - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: e98accdac9c22fddd9f63eed52a13a6e
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6cbbbc0ec878ce96f8fce9f47348e53f, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: 42c99e5bf653f47419a9a020f176568a, type: 2}
