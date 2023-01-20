@@ -85,13 +85,13 @@ public class GameManager : Buttons
         if (!TMtoggle.isOn)
         {
             TMtext.text = "Desligado";
-            TMimg.color = Color.red;
+            TMimg.color = new Color(255, 0, 0, 140); //red with alpha
 
         }
         else
         {
             TMtext.text = "Ligado";
-            TMimg.color = Color.blue;
+            TMimg.color = new Color(0, 0, 255, 140); //blue with alpha
         }
     }
 
@@ -103,12 +103,12 @@ public class GameManager : Buttons
         if (!TVtoggle.isOn)
         {
             TVtext.text = "Desligado";
-            TVimg.color = Color.red;
+            TVimg.color = new Color(255, 0, 0, 140); //red with alpha
         }
         else
         {
             TVtext.text = "Ligado";
-            TVimg.color = Color.blue;
+            TVimg.color = new Color(0, 0, 255, 140); //blue with alpha
         }
     }
     
