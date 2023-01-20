@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca8650ae-89e0-44c0-b01c-faf9fccce3ee" name="Changes" comment="" />
+    <list default="true" id="ca8650ae-89e0-44c0-b01c-faf9fccce3ee" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +87,7 @@
       <updated>1673971888091</updated>
       <workItem from="1673971890337" duration="6432000" />
       <workItem from="1674229991807" duration="30000" />
+      <workItem from="1674236080486" duration="332000" />
     </task>
     <servers />
   </component>
