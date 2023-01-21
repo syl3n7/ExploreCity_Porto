@@ -14,4 +14,8 @@ public class DisableButton : MonoBehaviour
         bt.interactable = false;
         text.enabled = true;
     }
+    
+    public void InteractableEmotes(){
+    	bt.interactable = false;
+    }
 }

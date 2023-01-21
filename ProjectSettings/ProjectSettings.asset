@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -41,12 +41,6 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: d39bac49b01ac3d46b180bfc70b3b7f0, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 3b7ced0d7f930c6a9a8a36af5ba28de3, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 2819d1817fc15bfb88fc678513bc407a, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: a24fa56775a14831381c81c95d5d0627, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -667,9 +661,9 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 0f8494d1b70c76bfcb5c3930e02e503c, type: 3}
-  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 0f8494d1b70c76bfcb5c3930e02e503c, type: 3}
-  blurSplashScreenBackground: 1
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: cd76e1eccbaf0c24cbf871f83b49c749, type: 3}
+  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: cd76e1eccbaf0c24cbf871f83b49c749, type: 3}
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
@@ -698,7 +692,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
