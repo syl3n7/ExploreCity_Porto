@@ -8,7 +8,7 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -41,12 +41,6 @@ PlayerSettings:
     height: 1
   m_SplashScreenLogos:
   - logo: {fileID: 21300000, guid: d39bac49b01ac3d46b180bfc70b3b7f0, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 3b7ced0d7f930c6a9a8a36af5ba28de3, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 2819d1817fc15bfb88fc678513bc407a, type: 3}
-    duration: 2
-  - logo: {fileID: 21300000, guid: a24fa56775a14831381c81c95d5d0627, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -142,8 +136,10 @@ PlayerSettings:
     16:10: 0
     16:9: 0
     Others: 1
-  bundleVersion: 0.3
-  preloadedAssets: []
+  bundleVersion: 0.7
+  preloadedAssets:
+  - {fileID: 2776378377698749441, guid: 6cbbbc0ec878ce96f8fce9f47348e53f, type: 2}
+  - {fileID: 11400000, guid: 42c99e5bf653f47419a9a020f176568a, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -174,9 +170,9 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 30
-  AndroidTargetSdkVersion: 0
-  AndroidPreferredInstallLocation: 0
+  AndroidMinSdkVersion: 28
+  AndroidTargetSdkVersion: 28
+  AndroidPreferredInstallLocation: 2
   aotOptions: 
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
@@ -257,12 +253,12 @@ PlayerSettings:
   useCustomBaseGradleTemplate: 0
   useCustomGradlePropertiesTemplate: 0
   useCustomProguardFile: 0
-  AndroidTargetArchitectures: 1
-  AndroidTargetDevices: 0
+  AndroidTargetArchitectures: 3
+  AndroidTargetDevices: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Documentos/user.keystore'
-  AndroidKeyaliasName: testing
+  AndroidKeystoreName: /home/lau/Documentos/user.keystore
+  AndroidKeyaliasName: testing only
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -276,8 +272,8 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   chromeosInputEmulation: 1
-  AndroidMinifyWithR8: 0
-  AndroidMinifyRelease: 1
+  AndroidMinifyWithR8: 1
+  AndroidMinifyRelease: 0
   AndroidMinifyDebug: 1
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
@@ -667,9 +663,9 @@ PlayerSettings:
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: 0f8494d1b70c76bfcb5c3930e02e503c, type: 3}
-  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: 0f8494d1b70c76bfcb5c3930e02e503c, type: 3}
-  blurSplashScreenBackground: 1
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: cd76e1eccbaf0c24cbf871f83b49c749, type: 3}
+  splashScreenBackgroundSourcePortrait: {fileID: 21300000, guid: cd76e1eccbaf0c24cbf871f83b49c749, type: 3}
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
@@ -690,7 +686,8 @@ PlayerSettings:
   scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Android: 1
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
@@ -698,7 +695,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -774,7 +771,7 @@ PlayerSettings:
   luminVersion:
     m_VersionCode: 1
     m_VersionName: 
-  apiCompatibilityLevel: 6
+  apiCompatibilityLevel: 3
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
   cloudProjectId: 
