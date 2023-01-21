@@ -7601,17 +7601,17 @@ MonoBehaviour:
           m_StringArgument: LoginScreen
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 296550449}
-        m_TargetAssemblyTypeName: Buttons, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1004014926}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Login
-          m_BoolArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &175033940
 MonoBehaviour:
@@ -11591,16 +11591,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296550449}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Login
-        m_Mode: 1
+      - m_Target: {fileID: 844128772}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1004014926}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &265506396
@@ -13293,7 +13305,7 @@ RectTransform:
   - {fileID: 1982960297}
   - {fileID: 1463547315}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -31564,7 +31576,7 @@ RectTransform:
   - {fileID: 517513729}
   - {fileID: 1807326940}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -37935,8 +37947,8 @@ RectTransform:
   - {fileID: 264624295}
   - {fileID: 298482054}
   - {fileID: 175033938}
-  m_Father: {fileID: 1004014927}
-  m_RootOrder: 2
+  m_Father: {fileID: 906705982}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -40182,6 +40194,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1004014927}
+  - {fileID: 844128773}
   - {fileID: 1115010590}
   - {fileID: 305840075}
   - {fileID: 1951092494}
@@ -44913,7 +44926,6 @@ RectTransform:
   m_Children:
   - {fileID: 265506394}
   - {fileID: 2075993638}
-  - {fileID: 844128773}
   m_Father: {fileID: 906705982}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52534,7 +52546,7 @@ RectTransform:
   - {fileID: 442775971}
   - {fileID: 1614056595}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -73434,7 +73446,7 @@ RectTransform:
   - {fileID: 1951995915}
   - {fileID: 1713937994}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -82910,7 +82922,7 @@ RectTransform:
   - {fileID: 396331835}
   - {fileID: 888153900}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -88827,7 +88839,7 @@ RectTransform:
   - {fileID: 1055148364}
   - {fileID: 451870695}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -94649,7 +94661,7 @@ RectTransform:
   - {fileID: 951212963}
   - {fileID: 1791699357}
   m_Father: {fileID: 906705982}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
