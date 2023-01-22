@@ -53,6 +53,12 @@ public class GameManager : Buttons
 
     private int ccounter;
 
+    private int MoneyValue = 10;
+
+    public TMP_Text MoneyText, MoneyText2;
+
+    public Button[] StoreBttns;
+    
     public void changeAvatarColor(Color color)
     {
         //colorImage.color = color;
@@ -66,6 +72,12 @@ public class GameManager : Buttons
         AudioSource.volume = volume;
         volumeSlider.value = volume;
         StartCoroutine(AddTickets());
+        TicketsValue = PlayerPrefs.GetInt("Tickets");
+        MoneyValue = PlayerPrefs.GetInt("Money");
+        TicketsText.text = PlayerPrefs.GetInt("Tickets").ToString();
+        Tickets2Text.text = PlayerPrefs.GetInt("Tickets").ToString();
+        MoneyText2.text = PlayerPrefs.GetInt("Money").ToString();
+        MoneyText.text = PlayerPrefs.GetInt("Money").ToString();
     }
 
     void Update()
@@ -79,9 +91,29 @@ public class GameManager : Buttons
         volume = volumeSlider.value;
         AudioSource.volume = volume;
         PlayerPrefs.SetFloat("volume", volume);
-        
+
         TicketsText.text = TicketsValue.ToString();
-        Tickets2Text.text = TicketsValue.ToString(); 
+        Tickets2Text.text = TicketsValue.ToString();
+        PlayerPrefs.SetInt("Tickets", TicketsValue);
+
+        MoneyText2.text = MoneyValue.ToString();
+        MoneyText.text = MoneyValue.ToString();
+        PlayerPrefs.SetInt("Money", MoneyValue);
+
+        if (MoneyValue <= 0)
+        {
+            for (int i = 0; i < StoreBttns.Length; i++)
+            {
+                StoreBttns[i].interactable = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < StoreBttns.Length; i++)
+            {
+                StoreBttns[i].interactable = true;
+            }
+        } 
     }
     public void Login()
     {
@@ -170,11 +202,25 @@ public class GameManager : Buttons
         Destroy(obj);
     }
 
+    public void AddMoney(int money)
+    {
+        MoneyValue += money;
+        PlayerPrefs.Save();
+        PlayerPrefs.Save();
+    }
+
+    public void RemoveTickets() //sempre que entrar num jogo perde 2 tickets.
+    {
+        TicketsValue -= TicketsAdd;
+        PlayerPrefs.Save();
+    }
+    
     IEnumerator AddTickets()
     {
         yield return new WaitForSeconds(90);
         TicketsValue += TicketsAdd;
         StartCoroutine(AddTickets());
+        PlayerPrefs.Save();
     }
 
     public void CallRevealCard()
@@ -187,10 +233,10 @@ public class GameManager : Buttons
         yield return new WaitForSeconds(1.5f);
         card.color = new Color(255, 255, 255, 255);
         card.sprite = cardsFace[ccounter];
-        yield return new WaitForSeconds(35);
+        yield return new WaitForSeconds(20);
         card.sprite = cardsBack[ccounter];
         ccounter++;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         card.color = new Color(255, 255, 255, 0);
     }
 }
