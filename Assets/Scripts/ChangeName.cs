@@ -2,14 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class ChangeName : MonoBehaviour
 {
-    public string[] Names = { "Portugal", "Espanha", "Franca", "Suica", "Dinamarca", "Eslovenia", "Italia", "Worldwide" };
-    public string[] Names2 = { "Portugues", "Espanhol", "Frances", "Sueco", "Dinamarques", "Italiano"};
-    public TMPro.TMP_Text country;
-    public TMPro.TMP_Text language;
+    public Button button, button2;
+    public string[] Names = { "Portugal", "Espanha", "França", "Suiça", "Dinamarca", "Eslovénia", "Itália", "Worldwide" };
+    public string[] Names2 = { "Português", "Español", "François", "Svenska", "Danks", "Italiano" };
+    public TMPro.TMP_Text country, language;
     int i = 0;
     int z = 0;
+
+    void Start()
+    {
+        button.onClick.AddListener(() => changeName());
+        button2.onClick.AddListener(() => changeName2());
+    }
 
     public void changeName()
     {

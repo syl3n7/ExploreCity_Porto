@@ -71,7 +71,7 @@ public class GameManager : Buttons
         }
     }
 
-    public void Logout()
+    public void Logout()  //terminar sessao
     {
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("LoginScreen");
