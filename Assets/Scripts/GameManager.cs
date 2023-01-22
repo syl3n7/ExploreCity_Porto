@@ -1,18 +1,20 @@
+using System.Net.Mime;
+using System.Runtime.CompilerServices;
+using System.Globalization;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using Button = UnityEngine.UI.Button;
-using Image = UnityEngine.UI.Image;
-using Toggle = UnityEngine.UI.Toggle;
 
 public class GameManager : Buttons
 {
     public GameObject menuPanel;
-    public BatteryStatus battery;
+    public GameObject configsPanel;
+    //public BatteryStatus battery;
     public TMPro.TMP_InputField input;
     public TMPro.TMP_Text region_text;
     public Player p1;
@@ -28,27 +30,70 @@ public class GameManager : Buttons
     public int playerRank;
     public double playerXP;
     
+    public AudioSource AudioSource;
+
+    public Slider volumeSlider;
+
+    //Value from the slider, and it converts to volume level
+    private float volume = 0.3f;
+
+    public Sprite Desativado;
+    public Sprite Ativado;
+
+    private int TicketsValue;
+    private int TicketsAdd = 2;
+    public TMP_Text TicketsText;
+    public TMP_Text Tickets2Text;
+
+    public Image card;
+
+    public Sprite[] cardsFace;
+
+    public Sprite[] cardsBack;
+
+    private int ccounter;
+
+    public void changeAvatarColor(Color color)
+    {
+        //colorImage.color = color;
+    }
+    
     void Start()
     {
         p1 = new Player(1000,5, "placeholdername", "Worlwide");
+        volume = PlayerPrefs.GetFloat("volume");
+        if (PlayerPrefs.HasKey("Name")) Login();
+        AudioSource.volume = volume;
+        volumeSlider.value = volume;
+        StartCoroutine(AddTickets());
     }
 
     void Update()
     {
         playername.text = PlayerPrefs.GetString("Name");
         
-        
-        
         // //mudar a sprite da bateria de acordo com o que for o estado que o unity consegue entender, do equipamento onde a app corre.
         // if (battery == BatteryStatus.Charging) batteryimg.sprite = Resources.Load<Sprite>("bateriaCharging");
         // else if (battery == BatteryStatus.Discharging) batteryimg.sprite = Resources.Load<Sprite>("bateriaDischarging");
         // else batteryimg.sprite = Resources.Load<Sprite>("bateriaFull"); // nao usar pasta Resources no futuro
+        volume = volumeSlider.value;
+        AudioSource.volume = volume;
+        PlayerPrefs.SetFloat("volume", volume);
+        
+        TicketsText.text = TicketsValue.ToString();
+        Tickets2Text.text = TicketsValue.ToString(); 
     }
     public void Login()
     {
-        if (PlayerPrefs.HasKey("Name")) menuPanel.SetActive(true);
+        if (PlayerPrefs.HasKey("Name"))
+        {
+            menuPanel.SetActive(true);
+            LoginPanel.SetActive(false);
+            CreateAccPanel.SetActive(false);
+        }
         else
         {
+            menuPanel.SetActive(false);
             LoginPanel.SetActive(false);
             CreateAccPanel.SetActive(true);
         }
@@ -71,10 +116,12 @@ public class GameManager : Buttons
         }
     }
 
-    public void Logout()
+    public void Logout()  //terminar sessao
     {
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene("LoginScreen");
+        menuPanel.SetActive(false);
+        configsPanel.SetActive(false);
+        LoginPanel.SetActive(true);
     }
 
     public void ToogleMusic() //alterar o estado do toggle da musica
@@ -85,13 +132,14 @@ public class GameManager : Buttons
         if (!TMtoggle.isOn)
         {
             TMtext.text = "Desligado";
-            TMimg.color = new Color(255, 0, 0, 140); //red with alpha
-
+            TMimg.sprite = Desativado;
+            AudioSource.mute = true;
         }
         else
         {
             TMtext.text = "Ligado";
-            TMimg.color = new Color(0, 0, 255, 140); //blue with alpha
+            TMimg.sprite = Ativado;
+            AudioSource.mute = false;
         }
     }
 
@@ -103,13 +151,46 @@ public class GameManager : Buttons
         if (!TVtoggle.isOn)
         {
             TVtext.text = "Desligado";
-            TVimg.color = new Color(255, 0, 0, 140); //red with alpha
+            TVimg.sprite = Desativado;
         }
         else
         {
             TVtext.text = "Ligado";
-            TVimg.color = new Color(0, 0, 255, 140); //blue with alpha
+            TVimg.sprite = Ativado;
         }
     }
     
+    public void volumeUpdater(float volumE)
+    {
+        volume = volumE;
+    }
+
+    public void Destroy(GameObject obj)
+    {
+        Destroy(obj);
+    }
+
+    IEnumerator AddTickets()
+    {
+        yield return new WaitForSeconds(90);
+        TicketsValue += TicketsAdd;
+        StartCoroutine(AddTickets());
+    }
+
+    public void CallRevealCard()
+    {
+        StartCoroutine(Reveal());
+    }
+    
+    IEnumerator Reveal()
+    {
+        yield return new WaitForSeconds(1.5f);
+        card.color = new Color(255, 255, 255, 255);
+        card.sprite = cardsFace[ccounter];
+        yield return new WaitForSeconds(35);
+        card.sprite = cardsBack[ccounter];
+        ccounter++;
+        yield return new WaitForSeconds(10);
+        card.color = new Color(255, 255, 255, 0);
+    }
 }
